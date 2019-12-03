@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ohel Yonathan - Horaires </title>
+	<link rel="stylesheet" type="text/css" href="horaires.css">
+</head>
+<body>
+	<header>
+		<div class= "container">
+			<div class= "box" id= entete> 
+			<ul>
+				<li> <button id= homebutton onclick="window.location.href = 'Ohel Yonathan.html';"> Ohel Yonathan</button></li> 
+				<li> <button id=contactbutton onclick="window.location.href = 'Ohel Yonathan - Contact.html';">Contacts </button></li> 
+				<li> <button id=photobutton onclick="window.location.href = 'Ohel Yonathan - Photos.html';"> Galerie Photo</button></li>
+				<li> <button id=horrairesbutton onclick="window.location.href = 'Ohel Yonathan - Horaires.html';"> Horaires </button></li> 
+			</ul>
+			</div>
+		</div>
+	</header>
+
+	<div class="im">
+		<h2 class="titre">  HORAIRES DE SHABBAT - זמני התפילות של שבת </h2>
+		<h3 id="jour"></h3>
+		<h2 id="paracha"></h2>
+
+		<table style="width:100%">
+		    <tr>
+		      <td>Entrée de Shabbat / Nérot</td>
+		      <td id= 'nerot'></td>
+		      <td> כניסת השבת והדלקת נרות </td>
+		    </tr>
+		    <tr>
+		      <td> Minha suivi de Arvit Shabbat</td>
+		      <td id= 'minhaVeille'> 16h15 </td>
+		      <td> מנחה וערבית ערב שבת </td>
+		    </tr>
+		    <tr>
+		   	  <td> Shaharit - Hodou </td>
+			  <td id= 'shaharit'> 8h45 </td>
+			  <td> שחרית - הודו </td>
+		    </tr>
+		    <tr>
+		      <td> Fin du Shéma </td>
+			  <td id= 'shema'> 8h47 </td>
+			  <td> סוף זמן קריאת שמע </td>
+		    </tr>
+		  	<tr>
+		   	  <td> Minha </td>
+			  <td id= 'minha'> 15h45 </td>
+			  <td> מנחה </td>
+		    </tr>
+		    <tr>
+		   	  <td> Fin de Shabbat </td>
+			  <td id= 'havdala'></td>
+			  <td> צאת השבת </td>
+		    </tr>
+		</table>
+
+		<br>
+
+		<h4> Kiddouch offert par la famille ... </h4>
+		<h4> Séouda Chlichite offerte par la famille ... </h4>
+
+		<b><div id= rav> Présence du Rav ... </div>
+		<div id= shiourim>Shiourim du Rav pendant Arvit Erev Shabbat et pendant la Séouda Chlichite</div></b>
+	</div>	
+</body>
+<script type="text/javascript">
+	const nerot = document.getElementById('nerot');
+	const minhaVeille = document.getElementById('minhaVeille');
+	const shema = document.getElementById('shema');
+	const minha = document.getElementById('minha');
+	const havdala = document.getElementById('havdala');
+	const paracha = document.getElementById('paracha');
+	const jour = document.getElementById('jour');
+
+	const getData = async () => {
+  try {
+    const response = await fetch(`https://www.hebcal.com/shabbat/?cfg=json&geonameid=293807&m=41`);
+    const data = await response.json();
+    console.log(data);
+    let nerotHour =  await data.items[0].title.substr(17,1);
+    nerotHour = parseInt(nerotHour);
+    let nerotMin =  await data.items[0].title.substr(19,2);
+    nerotMin = parseInt(nerotMin);
+    let havdalaHour =  await data.items[2].title.substr(19,1);
+    havdalaHour = parseInt(havdalaHour);
+    let havdalaMin =  await data.items[2].title.substr(21,2);
+    havdalaMin = parseInt(havdalaMin);
+    const parachaName = await data.items[1].hebrew;
+    const year = await data.items[1].date.substr(0, 4);
+    let month = await data.items[1].date.substr(5, 2);
+    let day = await data.items[1].date.substr(9,2);
+    day = parseInt(day);
+    nerot.innerText = `${nerotHour+12}h${nerotMin}`;  
+    paracha.innerText = parachaName; 
+    jour.innerText = `Vendredi ${day-1}/${month}/${year} et Samedi ${day}/${month}/${year} `;
+    minha.innerText = `${nerotHour+12}h00`;
+    havdala.innerText = `${havdalaHour+12}h${havdalaMin}`;
+  }
+  catch (error) {
+    var errorMessage = document.getElementById('name');
+    errorMessage.innerText = `Oh no! Something's wrong...`;
+  }};
+  getData();
+</script>
+</html>
+
+
