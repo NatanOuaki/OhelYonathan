@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ohel Yonathan - Horaires </title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+  body{
+	background-color: antiquewhite !important;
+	margin: 0px !important;
+	background-image: url(https://i.ibb.co/RH6d3r5/logo.png) !important;	
+	background-repeat: no-repeat !important;
+	background-attachment: fixed !important;
+	background-position: 350px 160px  !important;
+	background-size: 600px 600px !important;
+	margin: 0px !important;
+}
+
+#entete, #button, ul, li button {
+	background-color: #5d86bb  !important;
+}
+#button,li button{
+	color: white !important;
+}
+
+h1,h2{
+	color:blue !important;
+}
+
+h1{
+	margin-top: 0% !important;
+	font-size: 35px !important;
+}
+
+.button{
+	border: 1px #5d86bb  !important;
+	text-align: center !important;
+	font-size: 30px !important;
+}
+
+li {
+  float: left;
+}
+
+li button {
+  display: block !important;
+  color: white !important;
+  text-align: center !important;
+  padding: 14px 16px !important;
+  text-decoration: none !important;
+}
+
+li button:hover {
+  background-color: #5d86bb !important;
+}
+
+
+h1,h2, h3, h4, #rav, #shiourim{
+	text-align: center !important;
+}
+
+table {
+  font-size: 25px !important;
+  text-align: center !important;
+  justify-content: center !important;
+  border: 2px solid black !important;
+  border-collapse: collapse !important;
+}
+
+td {
+  border-bottom: 2px solid black !important;
+  padding: 10px !important;
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+#space{
+	color:#5d86bb;
+}
+
+h4{
+	font-size: 25px !important;
+}
+footer{
+	margin-top: 30px;
+	border-top: 2px solid #5d86bb ;
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	font-size: 20px;
+}
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+	<header>	<header>
+		<nav class="navbar navbar-expand-lg navbar-light text-info" style="background-color: #5d86bb;">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon">
+			  </span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" "button" id="homebutton" href='index.html'>Ohel Yonathan <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" "button" id=contactbutton href="Ohel Yonathan - Contact.html">Contacts</a>
+				</li>
+				<li class="nav-item">  
+				  <a class="nav-link" "button" id=photobutton href="Ohel Yonathan - Photos.html">Galerie Photo</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" "button" id=horrairesbutton href="Ohel Yonathan - Horaires.html">Horaires</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-item nav-link disabled my-5 my-sm-0"  id='space' href="#" tabindex="-1" aria-disabled="true"> cerezvvrezvrrevrvfdsvfdvvdvdfsvdfvdfvsdvdsvsvddfvdvdsvsdvsdvsd</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-item nav-link disabled my-5 my-sm-0"  id='address' href="#" tabindex="-1" aria-disabled="true">Adresse: Hagdoud Haivri 9, Ra'Anana</a>
+        </li>
+			  </ul>
+			</div>
+		  </nav>
+	</header><br>
+	<div class="im">
+		<h2 class="titre">  HORAIRES DE SHABBAT - זמני התפילות של שבת </h2>
+		<h3 id="jour"></h3>
+		<h2 id="paracha"></h2>
+    <div id='divtable'>
+      <table id="horairesTable" style="width:100%">
+          <tr>
+            <td>Entrée de Shabbat / Nérot</td>
+            <td id= 'nerot'></td>
+            <td> כניסת השבת והדלקת נרות </td>
+          </tr>
+          <tr>
+            <td> Minha suivi de Arvit Shabbat</td>
+            <td id= 'minhaVeille'> 16h15 </td>
+            <td> מנחה וערבית ערב שבת </td>
+          </tr>
+          <tr>
+            <td> Shaharit - Hodou </td>
+          <td id= 'shaharit'> 8h45 </td>
+          <td> שחרית - הודו </td>
+          </tr>
+          <tr>
+            <td> Fin du Shéma </td>
+          <td id= 'shema'> 8h47 </td>
+          <td> סוף זמן קריאת שמע </td>
+          </tr>
+          <tr>
+            <td> Minha </td>
+          <td id= 'minha'> 15h45 </td>
+          <td> מנחה </td>
+          </tr>
+          <tr>
+            <td> Fin de Shabbat </td>
+          <td id= 'havdala'></td>
+          <td> צאת השבת </td>
+          </tr>
+      </table>
+    </div>
+		<br><br><br>
+    <h3> Shaharit tous les matins à 8h00, au Eliezer Yaffé 6, avec la présence du Rav Haccoun</h3>
+  </div>	
+  <footer>
+		Toute reproduction complète ou partielle de site formellement interdite. - 		.כל העתקה מלאה או חלקית של האתר הזה אסורה בהחלט
+		<br>
+		©Copyrigth Ohel Yonathan.<br>		
+	</footer>
+</body>
+<script type="text/javascript">
+	const nerot = document.getElementById('nerot');
+	const minhaVeille = document.getElementById('minhaVeille');
+	const shema = document.getElementById('shema');
+	const minha = document.getElementById('minha');
+	const havdala = document.getElementById('havdala');
+	const paracha = document.getElementById('paracha');
+	const jour = document.getElementById('jour');
+  const horairesTable = document.getElementById('horairesTable');
+
+	const getData = async () => {
+  try {
+    //Fetch all the responsive data 
+    const response = await fetch(`https://www.hebcal.com/shabbat/?cfg=json&geonameid=293807&m=41`);
+    const data = await response.json();
+    const response1 = await fetch(`https://api.sunrise-sunset.org/json?lat=32.184448&lng=34.870766&date=today`);
+    const data1 = await response1.json();
+    //End Fetch 
+
+    //Get the date 
+    const year = await data.items[1].date.substr(0, 4);
+    let month = await data.items[1].date.substr(5, 2);
+    month -= 1;
+    let day = await data.items[1].date.substr(8,2);
+    day = parseInt(day);
+    //End of date
+
+    //Get Sunrise
+    let sunrise = data1.results.sunrise;
+    let sunriseHour= parseInt(sunrise.substr(0,1));
+    sunriseHour += 2;
+    let sunriseMin= parseInt(sunrise.substr(2,2));
+    let sunriseComplete = new Date(year, month, day, sunriseHour, sunriseMin);
+    //End Sunrise
+
+    //Get Sunset
+    let sunset = data1.results.sunset;
+    let sunsetHour= parseInt(sunset.substr(0,1));
+    sunsetHour += 14;
+    let sunsetMin= parseInt(sunset.substr(2,2));
+    let sunsetComplete = new Date(year, month, day, sunsetHour, sunsetMin);
+    //End Sunset
+
+    //Get Shaa Zmanit
+    shaa_zmanit = (sunsetComplete - sunriseComplete) / (1000 * 60) / 12 ;
+    shaa_zmanit= Math.floor(shaa_zmanit);
+    //End Shaa Zmanit
+
+    //Get Shema 
+    end_shemaHour =(3* shaa_zmanit/60)
+    end_shemaHour = end_shemaHour - end_shemaHour %1 + sunriseHour
+    end_shemaMin =(3* shaa_zmanit/60)
+    console.log(end_shemaMin)
+    end_shemaMin = end_shemaMin % 1 *60 + sunriseMin
+    if (end_shemaMin > 60){
+        end_shemaHour = end_shemaHour + 1
+        end_shemaMin= end_shemaMin%60
+    }
+    console.log(end_shemaMin)
+
+    //End Shema
+
+    //Get Nerot Hour 
+    let nerotHour =  await data.items[0].title.substr(17,1);
+    nerotHour = parseInt(nerotHour);
+    let nerotMin =  await data.items[0].title.substr(19,2);
+    nerotMin = parseInt(nerotMin);
+    //End Nerot Hour 
+
+    //Get Havdala Hour
+    let havdalaHour =  await data.items[2].title.substr(19,1);
+    havdalaHour = parseInt(havdalaHour);
+    let havdalaMin =  await data.items[2].title.substr(21,2);
+    havdalaMin = parseInt(havdalaMin);
+    //End Havdala Hour
+
+    //Get Paracha Name
+    const parachaName = await data.items[1].hebrew;
+    //End Paracha Name
+
+    //Get Minha Hour
+    let minhaHour = new Date(year, month, day, havdalaHour, havdalaMin);
+    minhaHour.setHours(havdalaHour-1);
+    minhaHour.setMinutes(havdalaMin-30);
+    minhaMin = minhaHour.toString().substr(19,2);
+    minhaHour = minhaHour.toString().substr(16,2);
+    minhaHour = parseInt(minhaHour);
+    minhaMin = parseInt(minhaMin);
+    //End Minha Hour
+
+    //Get the month in a word
+    if (month == 0){
+    	month = " Janvier "
+    };
+    if (month == 1){
+    	month = " Février "
+    };
+    if (month == 2){
+    	month = " Mars "
+    };
+    if (month == 3){
+    	month = " Avril "
+    };
+    if (month == 4){
+    	month = " Mai "
+    };
+    if (month == 5){
+    	month = " Juin "
+    };
+    if (month == 6){
+    	month = " Juillet "
+    };
+    if (month == 7){
+    	month = " Aout "
+    };
+    if (month == 8){
+    	month = " Septembre "
+    };
+    if (month == 9){
+    	month = " Octobre "
+    };
+    if (month == 10){
+    	month = " Novembre "
+    };
+    if (month == 11){
+    	month = " Décembre "
+    };
+    //End month in a word
+
+    //replace all the data in the website
+    jour.innerText = `Vendredi ${day-1}${month}${year} / Samedi ${day}${month}${year} `;
+    paracha.innerText = parachaName; 
+    if (nerotMin < 10){ 
+        nerot.innerText = `${nerotHour+12}h0${nerotMin}`;
+    }
+    else{
+        nerot.innerText = `${nerotHour+12}h${nerotMin}`; 
+    }
+
+    if (end_shemaMin < 10){ 
+        shema.innerText = `${end_shemaHour}h0${end_shemaMin}`
+    }
+    else {
+        shema.innerText = `${end_shemaHour}h${end_shemaMin}`
+    }
+
+    if (minhaMin < 10){ 
+        minha.innerText = `${minhaHour+12}h0${minhaMin}`; 
+    }
+    else {
+        minha.innerText = `${minhaHour+12}h${minhaMin}`;
+    }
+
+    if (havdalaMin< 10){ 
+        havdala.innerText = `${havdalaHour+12}h0${havdalaMin}`;  
+    }   
+    else{
+        havdala.innerText = `${havdalaHour+12}h${havdalaMin}`; 
+    } 
+    if (Number.isNaN(nerotHour) === true){
+        horairesTable.setAttribute("hidden","true");
+        const divtable = document.getElementById('divtable');
+		    var nAnMessage = document.createElement('h3');
+        nAnMessage.innerText= 'Désolé, nous avons recontré un problème... Veuillez réessayer ultérieurement '
+		    divtable.appendChild(nAnMessage);
+    }
+  } //End replace all 
+
+  catch (error) {
+    var errorMessage = document.getElementById('nerot');
+    errorMessage.innerText = 'Oh no! Something\'s wrong...';
+  }};
+  getData();
+  
+</script>
+</html>
+
+

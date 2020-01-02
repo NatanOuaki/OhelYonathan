@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+	body{
+	background-color: antiquewhite !important;
+	background-image: url(https://i.ibb.co/RH6d3r5/logo.png) !important;  
+	background-repeat: no-repeat !important;
+	background-position: 350px 160px  !important;
+	background-size: 600px 600px !important;
+	margin: 0px !important;
+}
+
+#entete, #button {
+	background-color: #5d86bb  !important;
+}
+
+h1{
+	color: blue !important;
+	margin-top: 0% !important;
+	font-size: 30px !important;
+}
+
+.button{
+	border: 1px #5d86bb  !important;
+	text-align: center !important;
+	font-size: 30px !important;
+}
+
+#space{
+	color:#5d86bb;
+}
+
+li {
+  float: left !important;
+}
+
+li button {
+  display: block !important;
+  color: white !important;
+  text-align: center !important;
+  padding: 14px 16px !important;
+  text-decoration: none !important;
+}
+
+li button:hover {
+  background-color: #5d86bb !important;
+}
+
+h2{
+	text-align: center !important;
+	color:blue !important;
+}
+
+.pratim{
+	margin-left: 100px !important;
+}
+
+footer{
+	margin-top: 30px !important;
+	border-top: 2px solid #5d86bb !important;
+	height: 60px !important;
+	width: 100% !important;
+	text-align: center !important;
+	display: inline-block !important;
+	font-size: 20px !important;
+}
+	</style>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Ohel Yonathan - Contacts</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light text-info" style="background-color: #5d86bb;">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon">
+			  </span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" "button" id="homebutton" href='index.html'>Ohel Yonathan <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" "button" id=contactbutton href="Ohel Yonathan - Contact.html">Contacts</a>
+				</li>
+				<li class="nav-item">  
+				  <a class="nav-link" "button" id=photobutton href="Ohel Yonathan - Photos.html">Galerie Photo</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" "button" id=horrairesbutton href="Ohel Yonathan - Horaires.html">Horaires</a>
+				</li>
+				<li class="nav-item"> 
+					<a class="nav-item nav-link disabled my-5 my-sm-0"  id='space' href="#" tabindex="-1" aria-disabled="true"> cerezvvrezvrrevrvfdsvfdvvdvdfsvdfvdfvsdvdsvsvddfvdvdsvsdvsdvsd</a>
+				  </li>
+				<li class="nav-item"> 
+					<a class="nav-item nav-link disabled my-5 my-sm-0" href="#" tabindex="-1" aria-disabled="true">Adresse: Hagdoud Haivri 9, Ra'Anana</a>
+				</li>
+			  </ul>
+			</div>
+		  </nav>
+	</header><br>
+
+    <h2 class="titre"> CONTACTS </h2>
+    
+
+    <h1> Michael Safar, président: </h1>
+    <ul>
+	    <li><div class= "pratim"> <b> Téléhone: </b> <a href="tel:+972542278205"> +972.54.227.8205</a> </div></li>
+	    <br>
+	    <li><div class= "pratim"> <b> Email: </b> <a href="mailito.michael.ohelyonathan@gmail.com" ?subject=feedback id="mail1"></a> </div></li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <h1> Julien Msika, comité: </h1>
+    <ul>
+	    <li><div class= "pratim"> <b> Téléhone: </b> <a href="tel:+972505807754"> +972.50.580.7754</a> </div></li>
+	    <br>
+	    <li><div class= "pratim"> <b> Email: </b> <a href="mailito.julien.ohelyonathan@gmail.com" ?subject=feedback  id="mail2"></a> </div></li>
+	</ul>
+	
+    <br>
+    <hr>
+    <br>
+
+    <h1> Dove Ouaki, trésorier: </h1>
+    <ul>
+	    <li><div class= "pratim"> <b> Téléhone: </b> <a href="tel:+972587097070"> +972.58.709.7070</a> </div></li>
+	    <br>
+	    <li><div class= "pratim" > <b> Email: </b> <a href="mailito.dove.ohelyonathan@gmail.com" ?subject=feedback id="mail3"></a> </div></li>
+	</ul>
+	<footer>
+		Toute reproduction complète ou partielle de site formellement interdite. - 		.כל העתקה מלאה או חלקית של האתר הזה אסורה בהחלט
+		<br>
+		©Copyrigth Ohel Yonathan.<br>		
+	</footer>
+</body>
+<script type="text/javascript">
+	const mail = ".ohelyonathan@gmail.com";
+	const mail1 = document.getElementById('mail1');
+	mail1.innerText = `michael${mail}`;
+	const mail2 = document.getElementById('mail2');
+	mail2.innerText = `julien${mail}`;
+	const mail3 = document.getElementById('mail3');
+	mail3.innerText = `dove${mail}`;
+</script>
+</html>
+
